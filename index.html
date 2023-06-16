@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>E-commerce</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <div>
+
+    <!-- Header -->
+
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/img/logo.png" alt="Logo" width="50px" class="me-2" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-flex mx-auto my-2 my-lg-0">
+            <input class="form-control" type="search" placeholder="Pesquise aqui" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Pesquisar</button>
+          </form>
+          <nav class="navbar-nav">
+            <a class="nav-link" href="#">Entrar</a>
+            <a class="nav-link" href="#">Criar Conta</a>
+            <a class="nav-link" href="#">Minha Conta</a>
+            <a class="nav-link" href="#">Rastrear Pedido</a>
+          </nav>
+          <a class="nav-link" href="#">
+            <img src="/img/carrinho.png" alt="Carrinho" width="50px" />
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Filtro -->
+
+  <div class="container pt-3 pb-3">
+    <div class="row ">
+      <div class="col-md-3">
+        <div class="card d-flex justiy-content-center align-items-center">
+          <div class="card-body ">
+            <form>
+              <div class="form-group">
+                <label for="filtro1">Collabs</label>
+                <select class="form-control" id="filtro1">
+                  <option></option>
+                  <option>Off-White</option>
+                  <option>Sacai</option>
+                  <option>Undercover</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="filtro2">Modelos</label>
+                <select class="form-control" id="filtro2">
+                  <option></option>
+                  <option>Dunk</option>
+                  <option>Nike Sb</option>
+                  <option>Airmax</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="filtro3">Tamanho</label>
+                <select class="form-control" id="filtro3">
+                  <option pla></option>
+                  <option>Tamanho 40</option>
+                  <option>Tamanho 41</option>
+                  <option>Tamanho 42</option>
+                </select>
+              </div>
+            </form>
+            <div class="form-row form-inline">
+              <div class="form-group col">
+                <label for="valorMinimo">Valor Mínimo</label>
+                <input type="text" class="form-control" id="valorMinimo" placeholder="99,99">
+                <label for="valorMaximo">Valor Máximo</label>
+                <input type="text" class="form-control" id="valorMaximo" placeholder="9999,99">
+              </div>
+            </div>
+            <div class=" form-group mt-3">
+              <button type="submit" class="btn btn-outline-dark">Filtrar</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel (Produtos em Destaque) -->
+
+      <div class="col-md-9 d-flex justify-content-center align-items-center">
+        <div id="carouselDestaque" class="carousel slide w-100" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselDestaque" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselDestaque" data-slide-to="1"></li>
+            <li data-target="#carouselDestaque" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+           
+          </div>
+          <a class="carousel-control-prev" href="#carouselDestaque" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselDestaque" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+
+        <!-- Produtos -->
+
+        <div class="card">
+          <div class="card-body mb-3">
+            <h5 class="card-title d-flex justify-content-center align-items-center ">Produtos</h5>
+            <div class="row">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produtos mais vistos e Newsletter -->
+
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-center">Produtos mais vistos</h5>
+            <div class="list-group d-flex justify-content-center align-items-center">
+              
+            </div>
+          </div>
+        </div>
+        <div class="card mt-3">
+          <div class="card-body">
+            <h5 class="card-title">Newsletter</h5>
+            <p class="card-text">Inscreva-se para receber nossas novidades.</p>
+            <form>
+              <div class="form-group">
+                <input class="form-control" type="search" id="termoPesquisa" placeholder="Pesquise aqui" aria-label="Search">
+              </div>
+              <button type="submit" class="btn btn-outline-dark">Inscrever-se</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Footer -->
+
+  <footer class="bg-light mt-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+          <h5>Formas de pagamento</h5>
+          <img src="/img/pix.png" class="m-2" style="height: 35px; width: 35px; object-fit: contain;" />
+          <img src="/img/boleto.png" class="m-2" style="height: 35px; width: 35px; object-fit: contain;" />
+          <img src="/img/visa.png" class="m-2" style="height: 40px; width: 40px; object-fit: contain;" />
+        </div>
+        <div class="col-lg-3 mb-3">
+          <h5>Redes sociais</h5>
+          <img src="/img/instagram.png" style="height: 40px; width: 40px; object-fit: contain;" />
+          <img src="/img/twitter.png" style="height: 30px; width: 30px; object-fit: contain;" />
+        </div>
+        <div class="col-lg-3 mb-3">
+          <h5>Contato</h5>
+          <ul class="list-unstyled">
+            <li><img src="/img/endereco.png" style="height: 35px; width: 35px; object-fit: contain;" /> Rua Teste, 123
+              - Bairro - São Paulo/São Paulo</li>
+            <li><img src="/img/telefone.png" style="height: 40px; width: 40px; object-fit: contain;" /> (00) 1234-5678
+            </li>
+            <li><img src="/img/email.png" style="height: 40px; width: 40px; object-fit: contain;" />
+              teste@gmail.com</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 mb-3">
+          <h5>Criado por</h5>
+         <h6>Aluno: Guilherme Nunes Faria</h6>
+         <span>Matrícula: 1474257</span>
+         <span>Curso: Análise e Desenvolvimento de Sistemas</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
